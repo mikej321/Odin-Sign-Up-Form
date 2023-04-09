@@ -32,7 +32,7 @@ img {
 }
 
 aside {
-
+    max-width: 40rem;
 }
 
 aside > img:first-child {
@@ -42,14 +42,14 @@ aside > img:first-child {
 
 aside > .logo {
     position: absolute;
-    top: 13.5rem;
+    top: 6rem;
     display: flex;
     background-color: rgba(25, 25, 25, 0.6);
-    min-width: 63.3rem;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     padding-block: 2rem;
+    width: 40rem;
 }
 
 .logo > img {
@@ -58,7 +58,7 @@ aside > .logo {
 }
 
 .logo > p {
-    font-size: 4rem;
+    font-size: 6rem;
     color: white;
 }
 
@@ -123,12 +123,16 @@ legend {
     outline: 2px solid blue;
 }
 
-.field > input:valid {
-    
+input[type="email"]:focus:valid,
+input[type="tel"]:focus:valid,
+input[type="password"]:focus:valid {
+    outline: 2px solid green;
 }
 
-.field > input:invalid {
-    
+input[type="email"]:focus:valid,
+input[type="tel"]:focus:valid,
+input[type="password"]:focus:valid {
+    outline: 2px solid red;
 }
 
 .submit {
@@ -153,6 +157,10 @@ button[type="submit"] {
     letter-spacing: 2px;
     margin-bottom: 2rem;
     cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #58D664;
 }
 
 a:link {
