@@ -10,7 +10,70 @@
 
     <body>
         <div class="container">
+            <aside>
+                <img src="./Images/forest.jpg" alt="A dense forest">
+                <div class="logo">
+                    <img src="./Images/odin-lined.png" alt="The Odin Logo">
+                    <p>ODIN</p>
+                </div>
+            </aside>
             
+            <main>
+                <p>This is not a real online service! You know you need something
+                   like this in your life to help you realize your deepest dreams.
+                   Sign up <i>now</i> to get started.
+                </p>
+
+                <p>You <i>know</i> you want to.</p>
+
+                <form action="#" method="post">
+                    
+                        <legend>Registration</legend>
+
+                        <fieldset>
+                            <div class="field">
+                                <label for="first_name">First Name</label>
+                                <input type="text" name="first_name" id="first_name" minlength="2" maxlength="15" required>
+                            </div>
+                            <div class="field">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" name="last_name" id="last_name" minlength="2" maxlength="15" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                            </div>
+                            <div class="field">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" name="confirm_password" id="confirm_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                            </div>
+                        </fieldset>
+                    
+
+                    </form>
+
+                    <button type="submit">Create Account</button>
+    
+                    <div class="submit">
+                        <p>Already have an account?</p>
+                        <a href="">Log in</a>
+                    </div>
+
+                </main>
         </div>
     </body>
 </html>
