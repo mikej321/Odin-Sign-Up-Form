@@ -92,6 +92,10 @@ form {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+form.submitted input:invalid {
+    border: 1px solid red;
+}
+
 legend,
 label {
     font-family: var(--sans-serif)
@@ -123,17 +127,27 @@ legend {
     outline: 2px solid blue;
 }
 
-input[type="email"]:focus:valid,
-input[type="tel"]:focus:valid,
-input[type="password"]:focus:valid {
-    outline: 2px solid green;
+.field[data-error] input {
+    border-color: #c92432;
+    color: #c92432;
+    background: #fffaff;
 }
 
-input[type="email"]:focus:valid,
-input[type="tel"]:focus:valid,
-input[type="password"]:focus:valid {
-    outline: 2px solid red;
+.field[data-error]::after {
+    content: attr(data-error);
+    font-size: 1.2rem;
+    color: #c92432;
+    display: block;
+    margin: 5px 0;
 }
+
+/* I grabbed all inputs that are a child of the field class that has a
+   data-attribute on them and styled them...Afterwards, I created
+   an after pseudo-class to display content after the element is created.
+   the attr() function can grab the data-error attribute and use it to
+   add the content after the input. */
+
+
 
 .submit {
     display: flex;

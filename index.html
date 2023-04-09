@@ -31,34 +31,34 @@
                         <legend>Registration</legend>
 
                         <fieldset>
-                            <div class="field">
-                                <label for="first_name">First Name</label>
+                            <div class="field" data-error="Please enter your first name">
+                                <label for="first_name">First Name *</label>
                                 <input type="text" name="first_name" id="first_name" minlength="2" maxlength="15" required>
                             </div>
-                            <div class="field">
-                                <label for="last_name">Last Name</label>
+                            <div class="field" data-error="Please enter your last name">
+                                <label for="last_name">Last Name *</label>
                                 <input type="text" name="last_name" id="last_name" minlength="2" maxlength="15" required>
                             </div>
                         </fieldset>
 
                         <fieldset>
-                            <div class="field">
-                                <label for="email">Email</label>
+                            <div class="field" data-error="Please enter a valid email address">
+                                <label for="email">Email *</label>
                                 <input type="email" name="email" id="email" required>
                             </div>
-                            <div class="field">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                            <div class="field" data-error="Please enter your phone number">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
                             </div>
                         </fieldset>
 
                         <fieldset>
-                            <div class="field">
-                                <label for="password">Password</label>
+                            <div class="field" data-error="Please enter your password">
+                                <label for="password">Password *</label>
                                 <input type="password" name="password" id="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                             </div>
-                            <div class="field">
-                                <label for="confirm_password">Confirm Password</label>
+                            <div class="field" data-error="Please confirm your password">
+                                <label for="confirm_password">Confirm Password *</label>
                                 <input type="password" name="confirm_password" id="confirm_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                             </div>
                         </fieldset>
@@ -75,6 +75,8 @@
 
                 </main>
         </div>
+
+        <script src="./index.js"></script>
     </body>
 </html>
 
